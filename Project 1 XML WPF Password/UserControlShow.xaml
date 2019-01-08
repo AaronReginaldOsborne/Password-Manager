@@ -1,0 +1,300 @@
+﻿<UserControl x:Class="Project_1_XML_WPF_Password.UserControlShow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Project_1_XML_WPF_Password"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+            <ScrollViewer HorizontalScrollBarVisibility="Visible">
+                <Grid x:Name="Accounts">
+                </Grid>
+                <!--<Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <materialDesign:Flipper Margin="20">
+                        <materialDesign:Flipper.FrontContent>
+                            <Grid Height="300" Width="200">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="160" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <materialDesign:ColorZone Mode="PrimaryLight" VerticalAlignment="Stretch">
+                                </materialDesign:ColorZone>
+                                <materialDesign:PackIcon Kind="AccountCircle" Height="128" Width="128"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock>CIBC Banking</TextBlock>
+                                    <Button Style="{StaticResource MaterialDesignFlatButton}"
+                                Command="{x:Static materialDesign:Flipper.FlipCommand}"
+                                Margin="0 4 0 0"
+                                >EDIT</Button>
+                                </StackPanel>
+                            </Grid>
+                        </materialDesign:Flipper.FrontContent>
+                        
+                        <materialDesign:Flipper.BackContent>
+                            <Grid Height="300" Width="200">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <materialDesign:ColorZone Mode="Accent" Padding="6">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Style="{StaticResource MaterialDesignToolForegroundButton}"
+                                Command="{x:Static materialDesign:Flipper.FlipCommand}"
+                                HorizontalAlignment="Left">
+                                            <materialDesign:PackIcon Kind="ArrowLeft" HorizontalAlignment="Right" />
+                                        </Button>
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">EDIT USER</TextBlock>
+                                    </StackPanel>
+                                </materialDesign:ColorZone>
+
+                                <Grid Grid.Row="1" Margin="0 6 0 0" HorizontalAlignment="Center" VerticalAlignment="Top"
+                          Width="172">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBox materialDesign:HintAssist.Hint="User ID:" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">trandall</TextBox>
+                                    <TextBox Grid.Row="1" materialDesign:HintAssist.Hint="Desciption" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">CIBC Online Banking</TextBox>
+                                    <TextBox Grid.Row="2" materialDesign:HintAssist.Hint="Password" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">pug12345</TextBox>
+                                    <TextBox Grid.Row="3" materialDesign:HintAssist.Hint="Log-in URL" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">very weak</TextBox>
+                                    <TextBox Grid.Row="4" materialDesign:HintAssist.Hint="Account Number" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">very weak</TextBox>
+                                </Grid>
+                            </Grid>
+                        </materialDesign:Flipper.BackContent>
+                    </materialDesign:Flipper>
+                
+                
+                
+                
+                    <materialDesign:Flipper Grid.Column="1" Margin="20">
+                        <materialDesign:Flipper.FrontContent>
+                            <Grid Height="256" Width="200">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="160" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <materialDesign:ColorZone Mode="PrimaryLight" VerticalAlignment="Stretch">
+                                </materialDesign:ColorZone>
+                                <materialDesign:PackIcon Kind="AccountCircle" Height="128" Width="128"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock>James Willock</TextBlock>
+                                    <Button Style="{StaticResource MaterialDesignFlatButton}"
+                                Command="{x:Static materialDesign:Flipper.FlipCommand}"
+                                Margin="0 4 0 0"
+                                >EDIT</Button>
+                                </StackPanel>
+                            </Grid>
+                        </materialDesign:Flipper.FrontContent>
+                        <materialDesign:Flipper.BackContent>
+                            <Grid Height="600" Width="200">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <materialDesign:ColorZone Mode="Accent" Padding="6">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Style="{StaticResource MaterialDesignToolForegroundButton}"
+                                Command="{x:Static materialDesign:Flipper.FlipCommand}"
+                                HorizontalAlignment="Left">
+                                            <materialDesign:PackIcon Kind="ArrowLeft" HorizontalAlignment="Right" />
+                                        </Button>
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">EDIT USER</TextBlock>
+                                    </StackPanel>
+                                </materialDesign:ColorZone>
+                                <Grid Grid.Row="1" Margin="0 6 0 0" HorizontalAlignment="Center" VerticalAlignment="Top"
+                          Width="172">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <TextBox materialDesign:HintAssist.Hint="User ID:" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">trandall</TextBox>
+                                    <TextBox Grid.Row="1" materialDesign:HintAssist.Hint="Desciption" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">CIBC Online Banking</TextBox>
+                                    <TextBox Grid.Row="2" materialDesign:HintAssist.Hint="Password" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">pug12345</TextBox>
+                                    <TextBox Grid.Row="3" materialDesign:HintAssist.Hint="Strength" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">very weak</TextBox>
+                                    <TextBox Grid.Row="4" materialDesign:HintAssist.Hint="percentage" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">0</TextBox>
+                                    <TextBox Grid.Row="5" materialDesign:HintAssist.Hint="date" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">2017-11-30</TextBox>
+                                    <TextBox Grid.Row="6" materialDesign:HintAssist.Hint="login-url" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">https://www.cibc.com/en/personal-banking.html</TextBox>
+                                    <TextBox Grid.Row="7" materialDesign:HintAssist.Hint="account-number" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">4787192937181972</TextBox>
+                                </Grid>
+                            </Grid>
+                        </materialDesign:Flipper.BackContent>
+                    </materialDesign:Flipper>
+                    <materialDesign:Flipper Grid.Column="2" Margin="20">
+                        <materialDesign:Flipper.FrontContent>
+                            <Grid Height="256" Width="200">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="160" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <materialDesign:ColorZone Mode="PrimaryLight" VerticalAlignment="Stretch">
+                                </materialDesign:ColorZone>
+                                <materialDesign:PackIcon Kind="AccountCircle" Height="128" Width="128"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock>James Willock</TextBlock>
+                                    <Button Style="{StaticResource MaterialDesignFlatButton}"
+                                Command="{x:Static materialDesign:Flipper.FlipCommand}"
+                                Margin="0 4 0 0"
+                                >EDIT</Button>
+                                </StackPanel>
+                            </Grid>
+                        </materialDesign:Flipper.FrontContent>
+                        <materialDesign:Flipper.BackContent>
+                            <Grid Height="600" Width="200">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <materialDesign:ColorZone Mode="Accent" Padding="6">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Style="{StaticResource MaterialDesignToolForegroundButton}"
+                                Command="{x:Static materialDesign:Flipper.FlipCommand}"
+                                HorizontalAlignment="Left">
+                                            <materialDesign:PackIcon Kind="ArrowLeft" HorizontalAlignment="Right" />
+                                        </Button>
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">EDIT USER</TextBlock>
+                                    </StackPanel>
+                                </materialDesign:ColorZone>
+                                <Grid Grid.Row="1" Margin="0 6 0 0" HorizontalAlignment="Center" VerticalAlignment="Top"
+                          Width="172">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <TextBox materialDesign:HintAssist.Hint="User ID:" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">trandall</TextBox>
+                                    <TextBox Grid.Row="1" materialDesign:HintAssist.Hint="Desciption" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">CIBC Online Banking</TextBox>
+                                    <TextBox Grid.Row="2" materialDesign:HintAssist.Hint="Password" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">pug12345</TextBox>
+                                    <TextBox Grid.Row="3" materialDesign:HintAssist.Hint="Strength" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">very weak</TextBox>
+                                    <TextBox Grid.Row="4" materialDesign:HintAssist.Hint="percentage" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">0</TextBox>
+                                    <TextBox Grid.Row="5" materialDesign:HintAssist.Hint="date" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">2017-11-30</TextBox>
+                                    <TextBox Grid.Row="6" materialDesign:HintAssist.Hint="login-url" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">https://www.cibc.com/en/personal-banking.html</TextBox>
+                                    <TextBox Grid.Row="7" materialDesign:HintAssist.Hint="account-number" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">4787192937181972</TextBox>
+                                </Grid>
+                            </Grid>
+                        </materialDesign:Flipper.BackContent>
+                    </materialDesign:Flipper>-->
+                    <!--<materialDesign:Flipper Grid.Column="0" Grid.Row="1" Margin="20">
+                        <materialDesign:Flipper.FrontContent>
+                            <Grid Height="256" Width="200">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="160" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <materialDesign:ColorZone Mode="PrimaryLight" VerticalAlignment="Stretch">
+                                </materialDesign:ColorZone>
+                                <materialDesign:PackIcon Kind="AccountCircle" Height="128" Width="128"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock>James Willock</TextBlock>
+                                    <Button Style="{StaticResource MaterialDesignFlatButton}"
+                                Command="{x:Static materialDesign:Flipper.FlipCommand}"
+                                Margin="0 4 0 0"
+                                >EDIT</Button>
+                                </StackPanel>
+                            </Grid>
+                        </materialDesign:Flipper.FrontContent>
+                        <materialDesign:Flipper.BackContent>
+                            <Grid Height="600" Width="200">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <materialDesign:ColorZone Mode="Accent" Padding="6">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Style="{StaticResource MaterialDesignToolForegroundButton}"
+                                Command="{x:Static materialDesign:Flipper.FlipCommand}"
+                                HorizontalAlignment="Left">
+                                            <materialDesign:PackIcon Kind="ArrowLeft" HorizontalAlignment="Right" />
+                                        </Button>
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">EDIT USER</TextBlock>
+                                    </StackPanel>
+                                </materialDesign:ColorZone>
+                                <Grid Grid.Row="1" Margin="0 6 0 0" HorizontalAlignment="Center" VerticalAlignment="Top"
+                          Width="172">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <TextBox materialDesign:HintAssist.Hint="User ID:" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">trandall</TextBox>
+                                    <TextBox Grid.Row="1" materialDesign:HintAssist.Hint="Desciption" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">CIBC Online Banking</TextBox>
+                                    <TextBox Grid.Row="2" materialDesign:HintAssist.Hint="Password" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">pug12345</TextBox>
+                                    <TextBox Grid.Row="3" materialDesign:HintAssist.Hint="Strength" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">very weak</TextBox>
+                                    <TextBox Grid.Row="4" materialDesign:HintAssist.Hint="percentage" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">0</TextBox>
+                                    <TextBox Grid.Row="5" materialDesign:HintAssist.Hint="date" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">2017-11-30</TextBox>
+                                    <TextBox Grid.Row="6" materialDesign:HintAssist.Hint="login-url" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">https://www.cibc.com/en/personal-banking.html</TextBox>
+                                    <TextBox Grid.Row="7" materialDesign:HintAssist.Hint="account-number" materialDesign:HintAssist.IsFloating="True"
+                                 Margin="0 12 0 0">4787192937181972</TextBox>
+                                </Grid>
+                            </Grid>
+                        </materialDesign:Flipper.BackContent>
+                    </materialDesign:Flipper>-->
+                <!--</Grid>-->
+            </ScrollViewer>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>
